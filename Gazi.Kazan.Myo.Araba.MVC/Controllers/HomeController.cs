@@ -15,7 +15,8 @@ namespace Gazi.Kazan.Myo.Araba.MVC.Controllers
         {
             List<rOzellikler> lst = OzelliklerDAL.Listele();
             return View(lst);
-        }
+        } 
+
 
 
 

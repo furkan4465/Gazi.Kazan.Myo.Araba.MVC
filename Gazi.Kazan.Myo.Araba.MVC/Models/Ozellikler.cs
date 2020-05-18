@@ -37,5 +37,9 @@ namespace Gazi.Kazan.Myo.Araba.MVC.Models
         [Column(TypeName = "varchar")]
         [MaxLength(50)]
         public string Renk { get; set; }
+
+        [Column(TypeName = "varchar")]
+        [MaxLength(50)]
+        public string detay { get; set; }
     }
 }

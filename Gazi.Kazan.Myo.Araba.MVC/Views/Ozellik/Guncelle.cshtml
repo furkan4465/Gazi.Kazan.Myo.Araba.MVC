@@ -1,6 +1,6 @@
 ﻿@model Gazi.Kazan.Myo.Araba.MVC.Models.Ozellikler
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -46,8 +46,8 @@
             @Html.Label("Renk")
             @Html.TextBox("Renk", Model.Renk)
             <br />
-            <input type="submit" value="Kaydet" />
-            <a href="/Home/Index">İptal</a>
+            <input type="submit" class="btn btn-success" value="Kaydet" />
+            <a href="/Home/Index" class="btn btn-danger">İptal</a>
         </form>
     </div>
 </body>
