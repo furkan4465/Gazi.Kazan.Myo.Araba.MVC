@@ -84,5 +84,29 @@ namespace Gazi.Kazan.Myo.Araba.MVC.BL
                 throw;
             }
         }
+
+        public static bool DetayGuncelle(Detay d)
+        {
+            try
+            {
+                return OzelliklerDAL.DetayGuncelle(d);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static Detay DetayGetir()
+        {
+            try
+            {
+                return OzelliklerDAL.DetayGetir();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

@@ -12,7 +12,8 @@
 </head>
 <body>
     <div>
-        <h3>ARABANIN DETAYLARI İÇİN DOĞRU YERDESİNİZ</h3>
+        <h3>@TempData["Detay"]</h3>
+        <a href="/Home/DetayGuncelle" class="btn btn-secondary">Detayı Düzenle</a>
     </div>
     @if (Session["Admin"] == null)
     {
@@ -74,7 +75,7 @@
     @if (Session["Admin"] != null)
     {
         <div>
-            <input type="button" class="btn btn-success"  value="Özellik Ekle" />
+            <input type="button" class="btn btn-success" value="Özellik Ekle" />
         </div>
     }
 

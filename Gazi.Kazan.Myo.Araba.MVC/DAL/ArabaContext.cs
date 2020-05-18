@@ -18,5 +18,6 @@ namespace Gazi.Kazan.Myo.Araba.MVC.DAL
 
         public DbSet<Ozellikler> ozelliklers { get; set; }
         public DbSet<Adminmodel> admins { get; set; }
+        public DbSet<Detay> detays { get; set; }
     }
 }

@@ -100,6 +100,7 @@ namespace Gazi.Kazan.Myo.Araba.MVC.DAL
                 o1.Vıtes = ozl.Vıtes;
                 o1.Yılı = ozl.Yılı;
                 o1.Yakıt = ozl.Yakıt;
+                o1.Tork = ozl.Tork;
 
                 int sonuc = ctx.SaveChanges();
                 if (sonuc > 0)
@@ -116,6 +117,19 @@ namespace Gazi.Kazan.Myo.Araba.MVC.DAL
             {
                 return false;
             }
+        }
+
+        public static bool DetayGuncelle(Detay d)
+        {
+            ArabaContext ctx = new ArabaContext();
+            ctx.detays.Add(d);
+            return ctx.SaveChanges() > 0;
+        }
+
+        public static Detay DetayGetir()
+        {
+            ArabaContext ctx = new ArabaContext();
+            return ctx.detays.FirstOrDefault();
         }
     }
 }

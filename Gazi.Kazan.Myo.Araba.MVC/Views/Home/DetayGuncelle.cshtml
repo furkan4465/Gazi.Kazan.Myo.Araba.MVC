@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "DetayGuncelle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetayGuncelle</h2>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div>
+        <form method="post" id="frm">
+            <input type="text" name="Detay" id="txtDetay" />
+            <br />
+            <input type="submit" id="btnKaydet" value="Kaydet" />
+        </form>
+    </div>
+
+    <script>
+        CKEDITOR.replace("Detay");
+
+        $("#frm").submit(function () {
+            var deger = CKEDITOR.instances["txtDetay"].getData();
+            console.log(deger);
+            $.ajax({
+                url: "/Home/OgrenciGuncelle/",
+                data: { detay: "Ossy" },
+                type: "POST",
+                dataType: "json",
+                success: function (data) {
+                }
+            })
+        })
+    </script>
+</body>
+</html>
