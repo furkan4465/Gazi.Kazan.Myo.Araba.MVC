@@ -12,6 +12,8 @@ namespace Gazi.Kazan.Myo.Araba.MVC.DAL
         public ArabaContext(): base ("cstr")
         {
 
+
+
         }
 
         public DbSet<Ozellikler> ozelliklers { get; set; }
