@@ -15,9 +15,10 @@ namespace Gazi.Kazan.Myo.Araba.MVC.Controllers
         public ActionResult Index()
         {
             List<rOzellikler> lst = OzelliklerDAL.Listele();
-            Detay d = OzelliklerDAL.DetayGetir();
-            TempData["Detay"] = d.Aciklama;
-            return View(lst);
+            if (lst != null)
+                return View(lst);
+
+            return View();
         }
 
         public ActionResult DetayGuncelle()
